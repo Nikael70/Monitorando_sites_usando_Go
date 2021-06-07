@@ -24,16 +24,6 @@ func main() {
 		exibeMenu()
 		comando := leComando()
 
-		// if comando == 1 {
-		// 	fmt.Println("Monitorando...")
-		// } else if comando == 2 {
-		// 	fmt.Println("Exibindo logs...")
-		// } else if comando == 0 {
-		// 	fmt.Println("Saindo do programa")
-		// } else {
-		// 	fmt.Println("Comando invalido")
-		// }
-
 		switch comando {
 		case 1:
 
@@ -84,13 +74,7 @@ func leComando() int {
 func iniciarmonitoramento() {
 
 	fmt.Println("Monitorando...")
-
-	// sites := []string{
-	// 	"https://random-status-code.herokuapp.com/",
-	// 	"https://www.alura.com.br/",
-	// 	"https://www.gentleman.com.br/",
-	// }
-
+	
 	sites := leSitesDoArquivo()
 
 	for i := 0; i < monitoramentos; i++ {
